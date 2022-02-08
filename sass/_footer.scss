@@ -1,0 +1,44 @@
+// Footer
+footer {
+  height: 16.2rem;
+  padding: 3.7rem 0rem;
+  background: $gray_100;
+  .container {
+    @include flex(row, center, space-between);
+    h3 {
+      color: $gray_0;
+      max-width: 80rem;
+    }
+    .icon-sm {
+      flex-wrap: wrap;
+      gap: 2.2rem;
+      @include flex(row, center, space-between);
+      a {
+        &:hover {
+          transition: 0.4s ease;
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    .container {
+      h3 {
+        max-width: 50rem;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    height: 28.2rem;
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        text-align: center;
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+}

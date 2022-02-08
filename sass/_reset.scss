@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  background: $dark;
+  overflow-x: hidden;
+  /*Scroll Effect*/
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $blue transparent;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 2rem;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 124.6rem;
+  padding: 0rem 1.5rem;
+}

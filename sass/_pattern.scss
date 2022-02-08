@@ -1,0 +1,145 @@
+// Pallet Color
+$blue: rgba(0, 238, 255, 1);
+$purple: rgba(92, 6, 140, 1);
+$roxo: rgba(27, 1, 42, 1);
+$lilas: rgba(152, 30, 217, 1);
+$violet: rgba(123, 97, 255, 1);
+$ocean: rgba(78, 220, 239, 1);
+$dark: rgba(21, 21, 21, 1);
+$light: rgba(252, 252, 252, 1);
+$gray_100: rgba(27, 27, 27, 1);
+$gray_75: rgba(52, 52, 52, 1);
+$gray_50: rgba(73, 73, 73, 1);
+$gray_25: rgba(237, 237, 237, 1);
+$gray_0: rgba(248, 248, 248, 1);
+
+// Typographicy
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5.6rem;
+  line-height: 6.8rem;
+  @include responsive(991px) {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 4.6rem;
+  line-height: 5.6rem;
+  @include responsive(991px) {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+  @include responsive(991px) {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+  }
+}
+
+h4 {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  @include responsive(991px) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  @include responsive(991px) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+a {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  @include responsive(991px) {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}
+
+// Buttons
+.btn-acess {
+  display: inline-block;
+  color: $roxo;
+  padding: 1.6rem 3.2rem;
+  background: $blue;
+  border-radius: 0.4rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.4rem;
+    transition: 0.7s ease;
+  }
+
+  &:hover {
+    z-index: 1;
+    &::after {
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(91.77deg, #caf6f9 -2%, #00eeff 101.86%);
+    }
+  }
+}
+
+.btn-icondd {
+  padding: 1.2rem 2.6rem;
+  background: $violet;
+  max-width: 20rem;
+  border-radius: 1.2rem;
+  @include flex(row, center, center);
+  svg {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: 1.6rem;
+  }
+  span {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    text-align: center;
+    color: $gray_0;
+  }
+  &:hover {
+    transition: all 0.3s linear;
+    background: $lilas;
+    box-shadow: 0px 0px 0px 5px rgba(189, 176, 255, 0.25);
+    svg {
+      #icon-dd-color {
+        fill: #b2a3fe;
+      }
+      path {
+        stroke: #b2a3fe;
+      }
+    }
+  }
+}
